@@ -1,0 +1,40 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-3">Welcome to JCTMS</h1>
+    <h2 class="text-muted">Judicial Case Tracking & Management System</h2>
+    <h3 class="display-5 fw-bold text-dark">"Lalit" Court System</h3>
+    
+    <div class="mt-5 p-5 bg-light rounded text-dark">
+        <h3 class="display-6">"Insaaf Delayed is Insaaf Denied"</h3>
+        <p class="lead">Getting justice in the system is easy. You just need patience, money, and a grandson to hear the verdict.</p>
+        <hr class="my-4">
+        
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card border-warning mb-3">
+                    <div class="card-header bg-warning text-dark"><strong>Reality Check</strong></div>
+                    <div class="card-body">
+                        <h5 class="card-title">Average Case Duration</h5>
+                        <p class="card-text">3 Generations (provisional estimate).</p>
+                        <p class="small text-muted"><em>"Beta, yeh case tumhari aulaad laregi."</em></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card border-danger mb-3">
+                    <div class="card-header bg-danger text-white"><strong>System Status</strong></div>
+                    <div class="card-body">
+                        <h5 class="card-title">Current Mode</h5>
+                        <p class="card-text display-6">"Tarikh pe Tarikh"</p>
+                        <p class="small">System overload. Please come back yesterday.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <a class="btn btn-primary btn-lg mt-3" asp-controller="Dashboard" asp-action="Index" role="button">Proceed to Dashboard (At Your Own Risk)</a>
+    </div>
+</div>

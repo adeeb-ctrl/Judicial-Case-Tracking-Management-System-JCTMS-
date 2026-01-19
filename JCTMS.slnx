@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="JCTMS.Core/JCTMS.Core.csproj" />
+  <Project Path="JCTMS.Data/JCTMS.Data.csproj" />
+  <Project Path="JCTMS.Services/JCTMS.Services.csproj" />
+  <Project Path="JCTMS.Web/JCTMS.Web.csproj" />
+</Solution>

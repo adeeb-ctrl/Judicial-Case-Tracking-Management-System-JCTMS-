@@ -1,0 +1,48 @@
+@model IEnumerable<JCTMS.Core.Entities.Case>
+
+@{
+    ViewData["Title"] = "Case List";
+}
+
+<h1>Judicial Cases</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-success">Opne New Case</a>
+</p>
+
+<table class="table table-striped table-hover">
+    <thead class="table-dark">
+        <tr>
+            <th>Ref Number</th>
+            <th>Title</th>
+            <th>Open Date</th>
+            <th>Status</th>
+            <th>Court Room</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.RefNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @item.OpenDate.ToString("yyyy-MM-dd")
+            </td>
+            <td>
+                <span class="badge bg-secondary">@item.Status</span>
+            </td>
+             <td>
+                @Html.DisplayFor(modelItem => item.CourtRoom)
+            </td>
+            <td>
+                <a asp-action="Details" asp-route-id="@item.CaseID" class="btn btn-sm btn-info">Details</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

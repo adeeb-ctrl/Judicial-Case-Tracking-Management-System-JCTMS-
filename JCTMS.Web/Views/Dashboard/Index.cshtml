@@ -1,0 +1,56 @@
+@model JCTMS.Web.Models.DashboardViewModel
+@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<div class="text-center mb-5">
+    <h1 class="display-4">Judicial Case Tracking System</h1>
+    <p class="lead">System Overview & Statistics</p>
+</div>
+
+<div class="row">
+    <div class="col-md-3">
+        <div class="card text-white bg-primary mb-3">
+            <div class="card-header">Active Cases</div>
+            <div class="card-body">
+                <h2 class="card-title">@Model.ActiveCases</h2>
+                <p class="card-text">Cases currently in progress.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card text-white bg-success mb-3">
+            <div class="card-header">Pending Hearings</div>
+            <div class="card-body">
+                <h2 class="card-title">@Model.PendingHearings</h2>
+                <p class="card-text">Hearings scheduled from today onwards.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card text-white bg-warning mb-3">
+            <div class="card-header">Total Judges</div>
+            <div class="card-body">
+                <h2 class="card-title">@Model.TotalJudges</h2>
+                <p class="card-text">Registered judicial officers.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card text-white bg-info mb-3">
+            <div class="card-header">New Cases (7 Days)</div>
+            <div class="card-body">
+                <h2 class="card-title">@Model.RecentCaseCount</h2>
+                <p class="card-text">Cases opened this week.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="mt-4">
+    <h3>Quick Actions</h3>
+    <div class="list-group">
+        <a asp-controller="Cases" asp-action="Create" class="list-group-item list-group-item-action">Register New Case</a>
+        <a asp-controller="Hearings" asp-action="Create" class="list-group-item list-group-item-action">Schedule Hearing</a>
+    </div>
+</div>

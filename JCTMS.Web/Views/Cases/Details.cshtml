@@ -1,0 +1,48 @@
+@model JCTMS.Core.Entities.Case
+
+@{
+    ViewData["Title"] = "Case Details";
+}
+
+<h1>Case Details: @Model.RefNumber</h1>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">Title</dt>
+        <dd class = "col-sm-10">@Html.DisplayFor(model => model.Title)</dd>
+        
+        <dt class = "col-sm-2">Observation</dt>
+        <dd class = "col-sm-10">@Html.DisplayFor(model => model.Description)</dd>
+        
+        <dt class = "col-sm-2">Status</dt>
+        <dd class = "col-sm-10">
+            <span class="badge bg-secondary">@Model.Status</span>
+        </dd>
+
+        <dt class = "col-sm-2">Court Room</dt>
+        <dd class = "col-sm-10">@Html.DisplayFor(model => model.CourtRoom)</dd>
+
+        <dt class = "col-sm-2">Open Date</dt>
+        <dd class = "col-sm-10">@Model.OpenDate.ToString("yyyy-MM-dd HH:mm")</dd>
+    </dl>
+</div>
+<div>
+    <a asp-controller="Hearings" asp-action="Create" asp-route-caseId="@Model.CaseID" class="btn btn-primary">Schedule Hearing</a>
+    <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+</div>
+
+<hr />
+<div class="row mt-4">
+    <div class="col-md-6">
+        <h3>Parties</h3>
+        <p class="text-muted">Parties involved in this case (Plaintiff/Defendant).</p>
+        <!-- TODO: List Parties here -->
+        <a asp-controller="Parties" asp-action="Create" asp-route-caseId="@Model.CaseID" class="btn btn-sm btn-outline-primary">+ Add Party</a>
+    </div>
+    <div class="col-md-6">
+        <h3>Hearings</h3>
+        <p class="text-muted">Scheduled hearings for this case.</p>
+        <!-- TODO: List Hearings here -->
+    </div>
+</div>
