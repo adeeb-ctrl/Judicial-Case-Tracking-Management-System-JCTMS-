@@ -106,6 +106,9 @@ erDiagram
 1.  **Clone the Repository** (or download source):
     ```bash
     git clone [https://github.com/yourusername/jctms.git](https://github.com/adeeb-ctrl/Judicial-Case-Tracking-Management-System-JCTMS-.git)
+    ```
+
+    ```bash
     cd Judicial-Case-Tracking-Management-System-JCTMS-
     ```
 
